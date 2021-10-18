@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale"/>
+        <title>Encuesta FrameWorks</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link rel="stylesheet" href="CSS/estilos.css">
+    </head>
+    <body id="contenido">
+        <header id="encabezado">
+            <h1>Encuesta FrameWorks</h1>
+        </header>
+        <section id="seccion">
+            <article>
+                <h3>¿Te Gusta Programar?</h3>
+                <input type="radio" name="respuesta" v-model="primera"  value="Me gusta Programar" v-on:click="cambiar">Si
+                <input type="radio" name="respuesta" v-on:click="cambiar1">No<br>
+            </article>
+            <article>
+            <span v-if="estado">
+                <h3>¿Cuantos años llevas programando?</h3>
+                <input type="number" v-model="anios"/>
+                <label>{{valido}}</label>
+                <button @click="validar()">Validar</button>
+            </span>
+            <span v-if="tpro">
+                <h3>¿Que te motiva a programar?</h3>
+                <input type="text" v-model="motiva"/>
+            </span>
+            <span v-if="exp">
+                <h3>¿Cuentanos tu experiencia programando?</h3>
+                <input type="text" v-model="exper"/>
+            </span>
+            <span v-if="lenguajes">
+                <h3>¿Cuantos lenguajes de programacion conoces?</h3>
+                <input type="text" v-model="leng" @keyup.enter="agregar()"/>
+                <button @click="agregar()">Agregar Lenguaje</button>
+            </span>
+            </article>
+            <aside id="lateral" class="col-sm-3">
+            <header>
+                <p><h2>{{gracias}}</h2></p>
+                <span v-if="res">
+                <p>{{primera}}</p>
+                <p>{{anios}}</p>
+                <p>{{motiva}}{{exper}}</p>
+                <p>{{leng}}</p>
+                <ul>
+                    <li v-for="(lang, index) in lenguajespro":key="index">{{lang}}</li>
+                </ul>
+            </span>
+            </header>
+        </aside>
+        </section>
+    <script src="JS/evj3.js"></script>
+    </body>
+</html>

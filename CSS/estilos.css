@@ -1,0 +1,37 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#lateral{
+    color: black;
+    float: right;
+	width: 300px;
+	margin: 20px 0px;
+	margin-left: 0px;
+	padding: 15px;
+	background: #CCCCCC;
+	text-align: justify;
+	box-shadow: 0px 0px 15px #FF33FF, 0px 10px 15px #FF00FF inset;
+}
+header, section, footer, aside, article, figure,  figcaption, hgroup{
+	display: block;
+}
+html{background-color: #FFCCD2;
+	width: 960px;
+	margin: 15px;
+	text-align: left;
+    float: left;
+}
+body{
+    color: cornsilk;
+	background-color: #000000;
+	background-image: url("../ima.GIF"); 
+	font-family: "segoe UI";
+	text-align: justify;
+}
+input, button{
+    background-color: #C37B89;
+}
+span{
+    width: 300px;
+}
